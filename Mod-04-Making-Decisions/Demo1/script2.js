@@ -1,0 +1,39 @@
+"use strict";
+
+// TUITION AND FEES CALCULATOR
+
+// undergraduate tutition is $4/hour and graduate tuition was $6/hour
+// fees are $2/hr with a max of $10
+// what do you owe the school
+
+let classification = "undergraduate";
+let hrsEnrolled = 15;
+
+let tuitionPerHour;
+if (classification == "undergraduate") {
+    tutitionPerHour = 4;
+}
+else {
+    tuitionPerHour = 6;
+}
+
+let totalTuition = hrsEnrolled * tuitionPerHour;
+
+//////////////////////////////////////////////
+let fees = 2 * hrsEnrolled;
+if (fees > 10) {
+    fees = 10;
+}
+//////////////////////////////////////////////
+/*
+let fees;
+if (hrsEnrolled < 5) {
+    fees = hrsEnrolled *2;
+}
+else {
+    fees = 10;
+}
+*/
+
+let totalDue = totalTuition + fees;
+console.log("Total Due by the 1st day of class is $" + totalDue.toFixed(2));
